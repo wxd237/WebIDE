@@ -6,7 +6,7 @@ RUN echo "http://mirrors.aliyun.com/alpine/v3.4/main/">/etc/apk/repositories
 RUN echo "http://mirrors.aliyun.com/alpine/v3.4/community" >>/etc/apk/repositories  
 
 
-RUN apk add --update cmake clang
+RUN apk add --update cmake clang musl-dev g++ make
 
 RUN set -ex && \
     if [ $(wget -qO- ipinfo.io/country) == CN ]; then echo "http://mirrors.aliyun.com/alpine/latest-stable/main/" > /etc/apk/repositories ;fi && \
