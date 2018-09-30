@@ -2,8 +2,8 @@ FROM java:8-jdk-alpine
 
 EXPOSE 8080
 
-RUN echo "http://mirrors.aliyun.com/alpine/v3.6/main/">/etc/apk/repositories  
-RUN echo "http://mirrors.aliyun.com/alpine/v3.6/community" >>/etc/apk/repositories  
+RUN echo "http://mirrors.aliyun.com/alpine/v3.4/main/">/etc/apk/repositories  
+RUN echo "http://mirrors.aliyun.com/alpine/v3.4/community" >>/etc/apk/repositories  
 
 
 RUN apk add --update cmake clang
