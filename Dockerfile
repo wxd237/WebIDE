@@ -2,6 +2,8 @@ FROM java:8-jdk-alpine
 
 EXPOSE 8080
 
+RUN apt-get -y install cmake clang-format
+
 RUN set -ex && \
     if [ $(wget -qO- ipinfo.io/country) == CN ]; then echo "http://mirrors.aliyun.com/alpine/latest-stable/main/" > /etc/apk/repositories ;fi && \
     apk update && \
